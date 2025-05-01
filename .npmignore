@@ -1,0 +1,37 @@
+# Source files
+src/
+*.ts
+!*.d.ts
+
+# Tests
+__tests__/
+*.test.ts
+coverage/
+
+# Configuration files
+.eslintrc.json
+.prettierrc
+tsconfig.json
+jest.config.js
+docker-compose.yml
+
+# Documentation
+.github/
+.gitignore
+README.md
+LICENSE
+
+# Environment
+.env
+.env.*
+.env.example
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db 
