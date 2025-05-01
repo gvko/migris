@@ -4,8 +4,6 @@ src/
 !*.d.ts
 
 # Tests
-__tests__/
-*.test.ts
 coverage/
 
 # Configuration files
@@ -34,4 +32,4 @@ LICENSE
 
 # OS
 .DS_Store
-Thumbs.db 
+Thumbs.db

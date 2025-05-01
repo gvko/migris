@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   test:
@@ -76,4 +76,4 @@ jobs:
         env:
           POSTGRES_URL: postgres://test:test@localhost:5432/test
           MYSQL_URL: mysql://test:test@localhost:3306/test
-          MONGO_URL: mongodb://test:test@localhost:27017/test 
+          MONGO_URL: mongodb://test:test@localhost:27017/test

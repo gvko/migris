@@ -48,7 +48,7 @@ The `Migris` constructor accepts the following configuration:
 
 ### Prerequisites
 
-- Node.js 16+
+- Node.js 20+
 - Docker and Docker Compose
 
 ### Setup

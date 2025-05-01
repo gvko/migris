@@ -23,10 +23,6 @@ build/
 .DS_Store
 Thumbs.db
 
-# Logs
-logs/
-*.log
-
 # Test coverage
 coverage/
 
@@ -35,9 +31,6 @@ logs
 *.log
 pnpm-debug.log*
 lerna-debug.log*
-
-# OS
-.DS_Store
 
 # Tests
 /coverage
@@ -58,13 +51,6 @@ lerna-debug.log*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-
-# dotenv environment variable files
-.env
-.env.development.local
-.env.test.local
-.env.production.local
-.env.local
 
 # temp directory
 .temp

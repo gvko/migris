@@ -20,10 +20,10 @@ What actually happened.
 ## Environment
 
 - OS: [e.g. macOS, Windows, Linux]
-- Node.js version: [e.g. 16.x, 18.x]
+- Node.js version: [e.g. 20.x, 22.x]
 - Database: [e.g. PostgreSQL 15, MySQL 8, MongoDB 6]
 - Migris version: [e.g. 1.0.0]
 
 ## Additional Context
 
-Add any other context about the problem here. 
+Add any other context about the problem here.

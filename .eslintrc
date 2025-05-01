@@ -1,6 +1,8 @@
 {
   "env": {
-    "es6": true
+    "es6": true,
+    "node": true,
+    "jest": true
   },
   "plugins": ["@typescript-eslint", "prettier", "simple-import-sort", "no-relative-import-paths"],
   "extends": [
@@ -11,7 +13,7 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2018,
+    "ecmaVersion": 2020,
     "sourceType": "module"
   },
   "rules": {

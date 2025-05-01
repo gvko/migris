@@ -1,48 +1,20 @@
-import pino from 'pino';
+import pino from 'pino'
 
-export default class Logger {
-  private readonly logger: pino.Logger;
+const consoleTransport = pino.transport({
+  target: 'pino-pretty',
+})
 
-  constructor() {
-    this.logger = pino({
-      level: process.env.LOG_LEVEL || 'info',
-      transport: {
-        target: 'pino-pretty',
-        options: {
-          colorize: true,
-        },
-      },
-    });
-  }
+const streams = [{ level: 'info', stream: consoleTransport }]
 
-  info(message: string, meta?: any): void {
-    this.logger.info(meta, message);
-  }
+// TODO: load certain config from env vars
+// TODO: allow for log config on lib init
+const logger = pino(
+  {
+    enabled: true,
+    base: { name: 'migris' },
+  },
+  pino.multistream(streams),
+)
 
-  error(message: string, meta?: any): void {
-    this.logger.error(meta, message);
-  }
-
-  warn(message: string, meta?: any): void {
-    this.logger.warn(meta, message);
-  }
-
-  debug(message: string, meta?: any): void {
-    this.logger.debug(meta, message);
-  }
-
-  getLevel(): string {
-    return this.logger.level;
-  }
-
-  setLevel(level: string): void {
-    this.logger.level = level;
-  }
-
-  child(options: any): Logger {
-    const childLogger = new Logger();
-    childLogger.logger = this.logger.child(options);
-    return childLogger;
-  }
-}
-
+export { logger }
+export type Logger = pino.Logger
